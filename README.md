@@ -44,6 +44,10 @@ Type: `String`
 
 Path to target `.tgz` file for deploy.
 
+#### version
+Type: `String`
+
+Version of artifact to deploy
 ### Example
 
 ```js

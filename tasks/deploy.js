@@ -10,9 +10,14 @@ module.exports = function (grunt) {
         var options = this.options();
         var urlObj = parse(options.repositoryPath);
         var targetPath = options.targetPath;
+        var packagePath = options.packagePath;
+        var fileName = packagePath.split('/').reverse()[0].split('.')[0] + '-' + options.version;
+        var extension = packagePath.split('/').reverse()[0].split('.')[1];
+
+
         var requestOptions = {
             hostname: urlObj.hostname,
-            path: urlObj.pathname + '/' + targetPath + '/' + options.version + '/' + targetPath + '.tgz',
+            path: urlObj.pathname + '/' + targetPath + '/' + options.version + '/' + fileName + '.' + extension,
             method: 'PUT',
             headers: {
                 'X-JFrog-Art-Api': options.apiKey
