@@ -55,7 +55,7 @@ artdeploy: {
     options: {
         apiKey: "pasteYourAPIkey",
         repositoryPath: "https://youorganization.jfrog.io/yourorganization/repository-name",
-        targetPath: "your-awesome-stuff.tgz",
+        targetPath: "place/package/where/you/store/this/artifact",
         packagePath: "place/where/you/store/your-awesome-stuff.tgz"
     }
 }
